@@ -1,0 +1,224 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.error-text, .error-icon{
+    display: none;
+}
+
+.details.error .error-text,
+.details.error .error-icon{
+    display: block;
+}
+
+.details.error input{
+    border: 2px solid hsl(0, 100%, 74%);
+}
+
+#intro{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("bg-intro-mobile.png");
+    background-color: hsl(0, 100%, 74%);
+    padding: 100px 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.left{
+    flex: 1;
+    margin-bottom: 60px;
+}
+
+.left h1{
+    color: aliceblue;
+    font-size: 35px;
+    line-height: 40px;
+    margin-bottom: 15px;
+}
+
+.left p{
+    color: aliceblue;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.right{
+    flex: 1;
+}
+
+.right .top{
+    background-color: hsl(248, 32%, 49%);
+    color: aliceblue;
+    padding: 13px 70px;
+    border-radius: 15px;
+    box-shadow: 0 5px hsla(249, 10%, 26%, 0.5);
+    margin-bottom: 40px;
+}
+
+.right .top p{
+    font-size: 16px;
+}
+
+.right .top p span{
+    font-weight: 600;
+}
+
+.right .form{
+    background-color: aliceblue;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px hsla(249, 10%, 26%, 0.5);
+}
+
+.details{
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.right input{
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid hsl(246, 25%, 77%);
+    padding-left: 20px;
+    outline: none;
+    background-color: aliceblue;
+    color: hsl(249, 10%, 26%);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.right button[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    padding-left: 20px;
+    outline: none;
+    background-color: hsl(154, 59%, 51%);
+    color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 3px hsla(154, 59%, 51%, 0.5);
+}
+
+.right input:focus{
+    border: 1.5px solid hsl(249, 10%, 26%);
+}
+
+.right button:hover{
+    background-color: hsl(154, 80%, 63%);
+}
+
+.right input::placeholder{
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+.right .form-footer{
+    margin-top: 15px;
+    color: hsl(246, 25%, 77%);
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.right .form-footer span{
+    color: hsl(0, 100%, 74%);
+    font-weight: 700;
+}
+
+.error-icon{
+    position: absolute;
+    top: 28%;
+    right: 20px;
+}
+
+.error-text{
+    text-align: right;
+    font-size: 10px;
+    font-style: italic;
+    font-weight: 500;
+    color: hsl(0, 100%, 74%);
+}
+footer{
+    margin: 20px;
+    text-align: center;
+    color: hsl(249, 10%, 26%);
+    font-size: 14px;
+}
+
+@media only screen and (min-width: 920px){
+    .container{
+        flex-direction: row;
+        background-image: url('bg-intro-desktop.png');
+        max-width: 1200px;
+    }
+
+    .left{
+        text-align: left;
+        padding-right: 70px;
+    }
+
+    .left h1{
+        font-size: 50px;
+       line-height: 60px;
+    }
+
+    .left p{
+        font-size: 16px;
+    }
+
+    .right{
+        max-width: 800px;
+    }
+
+    .right .top p{
+        font-size: 14px;
+    }
+
+    .right .top{
+        padding: 20px;
+    }
+
+    .right .form{
+        padding: 50px;
+    }
+
+    .right input::placeholder{
+        font-size: 14px;
+    }
+
+    .right .form-footer{
+        font-size: 10px;
+    }
+    footer{
+        font-size: 18px;
+    }
+}
